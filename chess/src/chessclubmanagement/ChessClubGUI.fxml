@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane  id="BorderPane" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chessclubmanagement.ChessClubGUIController">
+    <top>
+        <Label text="Chess Club Management" BorderPane.alignment="center">
+            <font>
+                <Font name="System Bold Italic" size="24.0" />
+            </font>
+            <padding>
+                <Insets top="20" bottom ="40"/>
+            </padding>
+        </Label>
+    </top>
+    <left>
+        <GridPane id="GridPane" vgap="15" hgap="15" 
+                  xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+            <padding>
+                <Insets left ="20" right= "20" top= "65"/>
+            </padding>
+           
+            <Label text="First Name: " GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField fx:id="textFieldFName" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+            <Label text="Last Name: " GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextField fx:id="textFieldLName" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+            <Label text="Games Played: " GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <TextField fx:id="textFieldGamesPlayed" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+            <Label text="Wins: " GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+            <TextField fx:id="textFieldWins" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+            
+            <Button fx:id="addB" layoutX="15.0" mnemonicParsing="false" 
+                     onAction="#addButtonAction" text="Add Member" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+        
+        </GridPane>
+    </left>
+    <center>
+        <TextArea fx:id="membersDetails" prefHeight="200.0" prefWidth="200.0" />
+    </center>
+    <right>
+        <GridPane id="GridPane" vgap="10" hgap="10" 
+                  xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+            <padding>
+                <Insets left ="20" right= "20"/>
+            </padding>
+            
+            <Label text="Member Services " GridPane.rowIndex="0" GridPane.columnIndex="0">
+                <font>
+                    <Font name="System Bold Italic" size="14.0" />
+                </font>
+                <padding>
+                    <Insets top="20" bottom ="20"/>
+                </padding>
+            </Label>
+            
+            <Button fx:id="deleteB" layoutX="98.0" mnemonicParsing="false" 
+                    onAction="#deleteButtonAction" text="Delete Member" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+            
+            <Button fx:id="updateWinsB" mnemonicParsing="false" 
+                    onAction="#updateWinsButtonAction" text="Record Win" GridPane.rowIndex="2" GridPane.columnIndex="0" />
+            
+            <Button fx:id="updateLossesB" mnemonicParsing="false" 
+                    onAction="#updateLossesButtonAction" text="Record Loss" GridPane.rowIndex="3" GridPane.columnIndex="0" />  
+            
+            <Label text="Reporting Services" GridPane.rowIndex="4" GridPane.columnIndex="0">
+                <font>
+                    <Font name="System Bold Italic" size="14.0" />
+                </font>
+                <padding>
+                    <Insets top="20" bottom ="20"/>
+                </padding>
+            </Label>
+      
+            <Button fx:id="viewMemListB" mnemonicParsing="false"
+                    onAction="#viewMembersButtonAction" text="View Member List" GridPane.rowIndex="5" GridPane.columnIndex="0"  />
+            
+            <Button fx:id="viewBestPlayerB" mnemonicParsing="false" 
+                    onAction="#viewBestPlayerButtonAction" text="View Best Players" GridPane.rowIndex="6" GridPane.columnIndex="0" />
+            
+            <Button fx:id="viewMostWinsB" mnemonicParsing="false" 
+                    onAction="#viewMostWinsButtonAction" text="View Most Wins" GridPane.rowIndex="7" GridPane.columnIndex="0" /> 
+        </GridPane>
+    </right>
+</BorderPane>
+
